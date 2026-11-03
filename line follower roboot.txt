@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main()
+{
+    int L3, L2, L1, C1, C2, R1, R2, R3;
+
+    printf("LINE FOLLOWER ROBOT\n");
+
+    printf("Enter Sensor Values (1=Black, 0=White)\n");
+
+    printf("L3: ");
+    scanf("%d", &L3);
+
+    printf("L2: ");
+    scanf("%d", &L2);
+
+    printf("L1: ");
+    scanf("%d", &L1);
+
+    printf("C1: ");
+    scanf("%d", &C1);
+
+    printf("C2: ");
+    scanf("%d", &C2);
+
+    printf("R1: ");
+    scanf("%d", &R1);
+
+    printf("R2: ");
+    scanf("%d", &R2);
+
+    printf("R3: ");
+    scanf("%d", &R3);
+
+    if (C1 == 1 && C2 == 1)
+    {
+        printf("Robot Moves Forward");
+    }
+    else if (L1 == 1 || L2 == 1 || L3 == 1)
+    {
+        printf("Robot Turns Left");
+    }
+    else if (R1 == 1 || R2 == 1 || R3 == 1)
+    {
+        printf("Robot Turns Right");
+    }
+    else
+    {
+        printf("Line Not Detected");
+    }
+
+    return 0;
+}
